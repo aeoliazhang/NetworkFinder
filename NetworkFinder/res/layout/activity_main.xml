@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/repeat_bg" >
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >        
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:singleLine="true"
+            android:textColor="@color/color_white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/title_splitter" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top_layout"
+        android:orientation="vertical" >
+        
+	        <LinearLayout
+		        android:id="@+id/signal_layout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="0dip"
+		        android:layout_weight="1"
+		        android:layout_marginTop="15dip"
+            	android:layout_marginBottom="15dip"
+            	android:gravity="center_vertical"
+		        android:orientation="vertical" >
+	
+		        <RelativeLayout
+		            android:id="@+id/connect_panel"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:orientation="horizontal">
+	
+		            <FrameLayout
+		                android:id="@+id/signal"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true" >
+		                <ImageView
+		                    android:id="@+id/connct_signal"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:background="@drawable/signal_0"
+		                    android:contentDescription="@null" />
+		                <LinearLayout
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:orientation="vertical" >
+		                    <ImageView
+		                        android:id="@+id/connct_network_type"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_gravity="top"
+		                        android:background="@drawable/network_type_3g"
+		                        android:contentDescription="@null"
+		                        android:visibility="visible"
+		                        android:paddingTop="3dip" />
+		                    <ImageView
+		                        android:id="@+id/connect_roam"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_marginTop="3dip"
+		                        android:background="@drawable/network_roam"
+		                        android:contentDescription="@null"
+		                        android:visibility="visible" />
+		                </LinearLayout>
+		            </FrameLayout>
+		            <FrameLayout
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:padding="2dip"
+		                android:layout_toRightOf="@id/signal"
+		                android:orientation="vertical" >
+		                <LinearLayout
+		                    android:id="@+id/connect_to_layout"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:orientation="vertical" >
+		                    <TextView
+		                        android:id="@+id/connect_label"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:ellipsize="end"
+		                        android:singleLine="true"
+		                        android:text="@string/connect_label"
+		                        android:textColor="@color/color_white"
+		                        android:textSize="12sp" />
+		                    <TextView
+		                        android:id="@+id/connect_network"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:ellipsize="end"
+		                        android:singleLine="true"
+		                        android:text="@string/network_description"
+		                        android:textColor="@color/light_blue"
+		                        android:textSize="16sp"
+		                        android:textStyle="bold" />
+		                </LinearLayout>
+		            </FrameLayout>
+		        </RelativeLayout>
+	        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/view_nfinder"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="3"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/background_nfinder" />                <ImageView
+                    android:id="@+id/nfinder_pointer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/nfinder" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/cover" />
+            </FrameLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/location_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginBottom="15dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+			<RelativeLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center"
+	            android:orientation="horizontal">
+		           <TextView
+		            android:id="@+id/textview_distance"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:ellipsize="end"
+		            android:singleLine="true"
+		            android:text="@string/getting_location"
+		            android:textColor="@color/color_white"
+		            android:textSize="12sp" />           
+		           <TextView
+		            android:id="@+id/value_distance"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:ellipsize="end"
+		            android:layout_centerVertical="true"
+					android:layout_toRightOf="@id/textview_distance"
+					android:singleLine="true"
+		            android:text="@string/distance_description"
+		            android:textColor="@color/light_blue"
+		            android:textSize="16sp"
+		            android:textStyle="bold" />
+				</RelativeLayout>
+	        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
